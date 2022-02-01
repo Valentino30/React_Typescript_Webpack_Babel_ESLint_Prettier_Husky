@@ -26,6 +26,11 @@ module.exports = {
         test: /\.css?$/,
         use: ["style-loader", "css-loader"],
       },
+      // Tells webpack to use its built-in asset/resource to load all .ico, .gif, .png, .jpg, .jpeg files
+      {
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: "asset/resource",
+      },
     ],
   },
   // Tells webpack to output the build file to the ./build folder and name it bundle.js
