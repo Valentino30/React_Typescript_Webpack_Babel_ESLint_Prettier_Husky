@@ -1,5 +1,6 @@
 **This app was developed following this webpack tutorial:**
-https://www.youtube.com/watch?v=Elpu7CIuqjY&list=PLC3y8-rFHvwiWPS2RO3BKotLRfgg_8WEo&index=1
+
+- https://www.youtube.com/watch?v=Elpu7CIuqjY&list=PLC3y8-rFHvwiWPS2RO3BKotLRfgg_8WEo&index=1
 
 **How to run the app in dev environment:**
 
