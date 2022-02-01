@@ -21,6 +21,11 @@ module.exports = {
           },
         ],
       },
+      // Tells webpack to use style-loader and css-loader to load all .css files
+      {
+        test: /\.css?$/,
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
   // Tells webpack to output the build file to the ./build folder and name it bundle.js
