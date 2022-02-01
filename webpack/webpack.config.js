@@ -26,10 +26,15 @@ module.exports = {
         test: /\.css?$/,
         use: ["style-loader", "css-loader"],
       },
-      // Tells webpack to use its built-in asset/resource to load all .ico, .gif, .png, .jpg, .jpeg files
+      // Tells webpack to use its built-in asset/resource loader to load all .ico, .gif, .png, .jpg, .jpeg files
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
         type: "asset/resource",
+      },
+      // Tells webpack to use its built-in asset/inline loader to load all .eot, .ttf, .otf, .svg files
+      {
+        test: /\.(woff(2)?|eot|ttf|otf|svg)$/,
+        type: "asset/inline",
       },
     ],
   },
