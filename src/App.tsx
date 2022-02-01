@@ -12,7 +12,7 @@ export default function App() {
       }}
     >
       <img src={logo} alt="webpack-logo" width={50} height={50} />
-      <h1>Welcome to Webpack</h1>
+      <h1>{`Welcome to Webpack by ${process.env.author}: "${process.env.NODE_ENV}"`}</h1>
       <img src={image} alt="webpack-image" width={50} height={50} />
     </div>
   );

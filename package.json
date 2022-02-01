@@ -6,7 +6,8 @@
   "author": "Valentino <valentino@secret-source.eu>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --config webpack/webpack.config.js --open"
+    "start": "webpack serve --config webpack/webpack.config.js --env env=dev --open",
+    "build": "webpack --config webpack/webpack.config.js --env env=prod"
   },
   "dependencies": {
     "react": "^17.0.2",
