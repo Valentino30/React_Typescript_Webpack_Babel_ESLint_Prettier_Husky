@@ -15,6 +15,10 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
+   "dependenciesComments": {
+    "react": "Needed for React to work",
+    "react-dom": "Needed to be able to use the ReactDOM.render() method"
+  },
   "devDependencies": {
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
@@ -42,6 +46,17 @@
     "webpack": "^5.67.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.3"
+  },
+   "devDependenciesComments": {
+    "@babel/core": "Needed for babel to work",
+    "@babel/preset-env": "Needed for babel to transpile modern Javascript",
+    "@babel/preset-react": "Needed for babel to transpile React",
+    "@babel/preset-typescript": "Needed for babel to transpile Typescript",
+    "babel-loader": "Needed for babel to work",
+    "html-webpack-plugin": "Needed to inject the bundle.js file inside the ./src/index.html and move the ./src/index.html to the ./build folder",
+    "webpack": "Needed for webpack to work",
+    "webpack-cli": "Needed for webpack to work",
+    "webpack-dev-server": "Needed to run the webpack --serve command"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
