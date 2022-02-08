@@ -1,12 +1,29 @@
 {
+    // Webpack is not able to transpile and polyfill your modern Javascript code 
+    // So, you need Babel to do that for you
+    // However, Babel can't do anything on its own
+    // To work, it needs plugins
+    // There is a lot of plugins out there for each specific transpiling purpose: https://babeljs.io/docs/en/plugins-list
+    // However, to avoid having to add tens of plugins to your Babel config file, presets were introduced
+    // A preset is nothing more than a collection of plugins for a specific transpiling purpose
+    // This means that by adding one preset you automatically add several plugins
+    // Down below, we are adding presets for modern Javascript, React and Typescript
+    // See example here for the preset-env preset: 
   "presets": [
+    // Preset-env transpiles the latest Javascript: https://babeljs.io/docs/en/babel-preset-env
     "@babel/preset-env",
     [
-      "@babel/preset-react",
-      {
-        "runtime": "automatic"
-      }
+        // Preset-react transpiles your React code: https://babeljs.io/docs/en/babel-preset-react
+        "@babel/preset-react",
+        {
+            // Options: "classic" | "automatic"
+            // Default: "classic". 
+            // Automatic: auto imports the functions that JSX transpiles to
+            // Source: https://babeljs.io/docs/en/babel-preset-react/
+            "runtime": "automatic"
+        }
     ],
+    // Preset-typescript transpiles your Typescript code: https://babeljs.io/docs/en/babel-preset-typescript
     "@babel/preset-typescript"
   ]
 }
