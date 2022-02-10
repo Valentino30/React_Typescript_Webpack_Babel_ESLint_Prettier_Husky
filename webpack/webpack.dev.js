@@ -9,6 +9,9 @@ module.exports = {
     hot: true,
     // This substiture the --open flag on the "start" script to automatically launch the browser on start
     open: true,
+     // Added this to avoid Cannot GET on client-side routes other than '/'
+    // Source: https://ui.dev/react-router-cannot-get-url-refresh/
+    historyApiFallback: true,
   },
   // This is the devtool used by CRA, many more devtools are available
   // Source-Map: A source-map is a .map file that maps the bundled code to your source code

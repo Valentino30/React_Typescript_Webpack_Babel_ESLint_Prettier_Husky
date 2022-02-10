@@ -43,6 +43,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "..", "./build"),
     filename: "bundle.js",
+    // Added this to avoid Cannot GET on client-side routes other than '/'
+    // Source: https://ui.dev/react-router-cannot-get-url-refresh/
+    publicPath: '/',
   },
   plugins: [
     // HtmlWebpackPlugin injects the bundle.js file inside the ./src/index.html and moves the ./src/index.html to the ./build folder
