@@ -15,15 +15,17 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-   "dependenciesComments": {
+  "dependenciesComments": {
     "react": "Needed for React to work",
     "react-dom": "Needed to be able to use the ReactDOM.render() method"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",
+    "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
+    "@babel/runtime": "^7.17.2",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
@@ -47,11 +49,13 @@
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.3"
   },
-   "devDependenciesComments": {
+  "devDependenciesComments": {
     "@babel/core": "Needed for babel to work",
+    "@babel/plugin-transform-runtime": "Needed to replace the @babel/polyfill plugin previously part of the @babel/core package",
     "@babel/preset-env": "Needed for babel to transpile modern Javascript",
     "@babel/preset-react": "Needed for babel to transpile React",
     "@babel/preset-typescript": "Needed for babel to transpile Typescript",
+    "@babel/runtime": "Needed to replace the @babel/polyfill plugin previously part of the @babel/core package",
     "babel-loader": "Needed for babel to work",
     "html-webpack-plugin": "Needed to inject the bundle.js file inside the ./src/index.html and move the ./src/index.html to the ./build folder",
     "webpack": "Needed for webpack to work",
@@ -66,7 +70,7 @@
       "prettier --write"
     ]
   },
-  "husky":{
+  "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }

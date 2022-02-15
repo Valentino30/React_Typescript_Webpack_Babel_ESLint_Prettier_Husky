@@ -25,5 +25,8 @@
     ],
     // Preset-typescript transpiles your Typescript code: https://babeljs.io/docs/en/babel-preset-typescript
     "@babel/preset-typescript"
-  ]
+  ],
+  // This substitutes the @babel/polyfill plugin previously part of the @babel/core package
+  // Source: https://babeljs.io/docs/en/babel-polyfill
+  "plugins": [["@babel/plugin-transform-runtime"]]
 }
